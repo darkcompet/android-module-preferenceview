@@ -5,5 +5,20 @@
 		<attr name="dk_color_layout_bkg" format="color" />
 		<attr name="dk_color_layout_bkg_opposite" format="color" />
 		<attr name="dk_color_popup_theme" format="color" />
+		<attr name="dk_color_translucent" format="color" />
+		<attr name="dk_color_material_050" format="color" />
+		<attr name="dk_color_material_100" format="color" />
+		<attr name="dk_color_material_200" format="color" />
+		<attr name="dk_color_material_300" format="color" />
+		<attr name="dk_color_material_400" format="color" />
+		<attr name="dk_color_material_500" format="color" />
+		<attr name="dk_color_material_600" format="color" />
+		<attr name="dk_color_material_700" format="color" />
+		<attr name="dk_color_material_800" format="color" />
+		<attr name="dk_color_material_900" format="color" />
+		<attr name="dk_color_material_a100" format="color" />
+		<attr name="dk_color_material_a200" format="color" />
+		<attr name="dk_color_material_a400" format="color" />
+		<attr name="dk_color_material_a700" format="color" />
 	</declare-styleable>
 </resources>
