@@ -8,6 +8,8 @@ import android.content.Context;
 
 import androidx.annotation.Nullable;
 
+import tool.compet.preference.DkSharedPreference;
+
 @SuppressWarnings("unchecked")
 public abstract class TheBasePreference<P> implements DkPreference {
 	// Control enabled/disabled state by this
@@ -22,7 +24,7 @@ public abstract class TheBasePreference<P> implements DkPreference {
 
 	// Init below fields when add a preference
 	protected Context context; // to get resource value
-	protected DkPreferenceStorage storage; // to store setting
+	protected DkSharedPreference storage; // to store setting
 	protected DkPreferenceListener listener; // to callback when something changed
 
 	TheBasePreference(@Nullable String key) {
@@ -38,7 +40,7 @@ public abstract class TheBasePreference<P> implements DkPreference {
 	 * Pass more data when add a preference.
 	 */
 	@Override
-	public void init(Context context, DkPreferenceStorage storage, DkPreferenceListener listener) {
+	public void init(Context context, DkSharedPreference storage, DkPreferenceListener listener) {
 		this.context = context;
 		this.storage = storage;
 		this.listener = listener;

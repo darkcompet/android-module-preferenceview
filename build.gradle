@@ -40,5 +40,6 @@ dependencies {
 	androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
 	api project(path: ':android-module-core')
+	api project(path: ':android-module-preference')
 	api project(path: ':android-module-compactview')
 }

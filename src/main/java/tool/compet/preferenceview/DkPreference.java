@@ -8,6 +8,8 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 
+import tool.compet.preference.DkSharedPreference;
+
 public interface DkPreference {
 	/**
 	 * Preference key in storage.
@@ -21,7 +23,7 @@ public interface DkPreference {
 	 * @param storage To store setting
 	 * @param listener To tell caller know changes from this preference.
 	 */
-	void init(Context context, DkPreferenceStorage storage, DkPreferenceListener listener);
+	void init(Context context, DkSharedPreference storage, DkPreferenceListener listener);
 
 	/**
 	 * Called when init view.

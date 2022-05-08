@@ -11,14 +11,15 @@ import java.util.List;
 
 import tool.compet.core.DkCollections;
 import tool.compet.core.DkStrings;
+import tool.compet.preference.DkSharedPreference;
 
 public class ThePreferenceManager {
 	private final Context context;
 	private final List<DkPreference> preferences = new ArrayList<>();
-	private final DkPreferenceStorage storage;
+	private final DkSharedPreference storage;
 	private final DkPreferenceListener listener;
 
-	ThePreferenceManager(Context context, DkPreferenceStorage storage, DkPreferenceListener listener) {
+	ThePreferenceManager(Context context, DkSharedPreference storage, DkPreferenceListener listener) {
 		this.context = context;
 		this.storage = storage;
 		this.listener = listener;

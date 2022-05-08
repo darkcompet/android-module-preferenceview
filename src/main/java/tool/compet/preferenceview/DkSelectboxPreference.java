@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import tool.compet.preference.DkSharedPreference;
 import tool.compet.view.DkViews;
 
 /**
@@ -56,7 +57,7 @@ public class DkSelectboxPreference extends TheBasePreference<DkSelectboxPreferen
 	}
 
 	@Override
-	public void init(Context context, DkPreferenceStorage storage, DkPreferenceListener listener) {
+	public void init(Context context, DkSharedPreference storage, DkPreferenceListener listener) {
 		super.init(context, storage, listener);
 		this.selectedValue = storage.getString(key);
 	}
@@ -147,7 +148,7 @@ public class DkSelectboxPreference extends TheBasePreference<DkSelectboxPreferen
 					selectedName = entryNames[which];
 					selectedValue = entryValueList.get(which);
 
-					storage.putString(key, selectedValue);
+					storage.putString(key, selectedValue).commitAsync();
 					listener.onPreferenceChanged(key);
 
 					dlg.dismiss();
