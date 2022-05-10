@@ -4,6 +4,8 @@ plugins {
 }
 
 android {
+	namespace 'tool.compet.preferenceview'
+
 	compileSdk 31
 
 	defaultConfig {
@@ -29,7 +31,6 @@ android {
 	kotlinOptions {
 		jvmTarget = '11'
 	}
-    namespace 'tool.compet.preferenceview'
 }
 
 dependencies {
