@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import tool.compet.preference.DkSharedPreference;
+import tool.compet.preference.DkPreference;
 import tool.compet.view.DkViews;
 
 /**
@@ -41,9 +41,9 @@ public class DkCheckBoxPreference extends TheBasePreference<DkCheckBoxPreference
 	}
 
 	@Override
-	public void init(Context context, DkSharedPreference storage, DkPreferenceListener listener) {
-		super.init(context, storage, listener);
-		this.checked = storage.getBoolean(key);
+	public void init(Context context, DkPreference preference, DkPreferenceListener listener) {
+		super.init(context, preference, listener);
+		this.checked = preference.getBoolean(key);
 	}
 
 	@Override
@@ -88,7 +88,7 @@ public class DkCheckBoxPreference extends TheBasePreference<DkCheckBoxPreference
 			cbCheck.setOnCheckedChangeListener((buttonView, isChecked) -> {
 				checked = isChecked;
 
-				storage.putBoolean(key, isChecked).commitAsync();
+				preference.edit().putBoolean(key, isChecked).commitAsync();
 				listener.onPreferenceChanged(key);
 
 				notifyDataChanged();

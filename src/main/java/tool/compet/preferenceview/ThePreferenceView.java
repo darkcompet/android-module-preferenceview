@@ -4,7 +4,7 @@
 
 package tool.compet.preferenceview;
 
-import tool.compet.preference.DkSharedPreference;
+import tool.compet.preference.DkPreference;
 
 public interface ThePreferenceView {
 	/**
@@ -15,7 +15,7 @@ public interface ThePreferenceView {
 	/**
 	 * Subclass must provide which storage to store preference
 	 */
-	DkSharedPreference storage();
+	DkPreference storage();
 
 	/**
 	 * Subclass must manually define content (item list) of preference

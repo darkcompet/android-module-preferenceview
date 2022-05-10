@@ -87,15 +87,15 @@ public abstract class DkPreferenceFragment<B extends ViewDataBinding>
 			super(itemView);
 		}
 
-		void decorate(DkPreference preference) {
+		void decorate(DkPreferenceComponent preference) {
 			preference.decorateView(itemView);
 		}
 	}
 
 	private static class MyPreferenceAdapter extends RecyclerView.Adapter<MyViewHolder> {
-		private final List<DkPreference> preferences;
+		private final List<DkPreferenceComponent> preferences;
 
-		MyPreferenceAdapter(List<DkPreference> preferences) {
+		MyPreferenceAdapter(List<DkPreferenceComponent> preferences) {
 			this.preferences = preferences;
 		}
 
@@ -103,7 +103,7 @@ public abstract class DkPreferenceFragment<B extends ViewDataBinding>
 		@Override
 		public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 			// At below method `getItemViewType()`, we has set viewType as position of the preference in list
-			DkPreference preference = preferences.get(viewType);
+			DkPreferenceComponent preference = preferences.get(viewType);
 			return new MyViewHolder(preference.createView(parent.getContext(), parent));
 		}
 
